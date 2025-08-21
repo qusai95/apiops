@@ -1,2 +1,2 @@
 # apiops
-APIOPS Reference Implementation
+APIOPs Reference Implementation
