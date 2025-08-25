@@ -1,0 +1,7 @@
+{
+  "properties": {
+    "displayName": "ISKAN-TOKEN",
+    "secret": true,
+    "tags": []
+  }
+}

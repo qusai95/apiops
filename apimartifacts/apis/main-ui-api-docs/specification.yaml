@@ -1,0 +1,384 @@
+openapi: 3.0.1
+info:
+  title: Main UI API Docs
+  description: This is the API documentation for New Unified Iskan Platform to be utlized to build UI App
+  version: '1.0'
+servers:
+  - url: https://mbrh-testing.azure-api.net/main-ui
+paths:
+  /api/v1.0/uimain/usrmgmt/audit/logLogoutEvent:
+    post:
+      tags:
+        - usr-mgmt-controller
+      summary: logLogout
+      operationId: logLogout
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: string
+              example: string
+  /api/v1.0/uimain/usrmgmt/audit/logLoginEvent:
+    post:
+      tags:
+        - usr-mgmt-controller
+      summary: logLogin
+      operationId: logLogin
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: string
+              example: string
+  /api/v1.0/uimain/usrmgmt/user/profile:
+    get:
+      tags:
+        - usr-mgmt-controller
+      summary: getUserProfileOnUI
+      operationId: getUserProfileOnUI
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+              example:
+                - string
+  /api/v1.0/uimain/usrmgmt/user/list/all:
+    get:
+      tags:
+        - usr-mgmt-controller
+      summary: getAllUsers
+      operationId: getAllUsers
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/User'
+              example:
+                - userId: 0
+                  username: string
+                  fullName: string
+                  email: string
+                  isAdmin: string
+                  createdBy: string
+                  createdOn: string
+                  modifiedBy: string
+                  modifiedOn: string
+                  active: 0
+                  disableAfterDate: string
+                  lastSuccessfulLogin: string
+                  inactiveUserPolicy: 0
+  /api/v1.0/uimain/usrmgmt/user/authorized:
+    get:
+      tags:
+        - usr-mgmt-controller
+      summary: getUserAuthourized
+      operationId: getUserAuthourized
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: boolean
+              example: 'True'
+  /api/v1.0/uimain/lookup/supAppChangeApplicantIdReasons/map/all/active:
+    get:
+      tags:
+        - lookup-controller
+      summary: getAllActiveSupAppChangeApplicantIdReasonMap
+      operationId: getAllActiveSupAppChangeApplicantIdReasonMap
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties:
+                  type: object
+  '/api/v1.0/uimain/letters/pdf/completionLetter/{applicationNo}/{applicantId}/{serviceType}':
+    get:
+      tags:
+        - letter-controller
+      summary: downloadApplicationReport
+      operationId: downloadApplicationReport
+      parameters:
+        - name: applicationNo
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int32
+        - name: applicantId
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int32
+        - name: serviceType
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int32
+      responses:
+        '200':
+          description: OK
+          content:
+            application/pdf:
+              schema:
+                type: string
+                format: binary
+              examples:
+                default:
+                  value: 
+  /api/v1.0/uimain/usrmgmt/userEffectivePrivilege/list/byUser:
+    get:
+      tags:
+        - usr-mgmt-controller
+      summary: getUserEffectivePrivilege
+      operationId: getUserEffectivePrivilege
+      parameters:
+        - name: username
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/UserEffectivePrivilege'
+              example:
+                - userId: 0
+                  roleId: 0
+                  privilegeId: 0
+                  username: string
+                  roleCode: string
+                  privilegeCode: string
+                  privilegeDesc: string
+                  privilegeUiCode: string
+                  privilegeStatus: string
+                  allowSource: string
+                  pathDepth: 0
+  /api/v1.0/uimain/usrmgmt/user/data/tree:
+    get:
+      tags:
+        - usr-mgmt-controller
+      summary: getUserTreeData
+      operationId: getUserTreeData
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties:
+                  type: object
+  /api/v1.0/uimain/usrmgmt/rolePrivilegesWithAllInheritance/list/all:
+    get:
+      tags:
+        - usr-mgmt-controller
+      summary: getAllRolePrivilegesWithAllInheritance
+      operationId: getAllRolePrivilegesWithAllInheritance
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/RolePrivilegesWithAllInheritance'
+              example:
+                - roleId: 0
+                  privilegeId: 0
+                  roleCode: string
+                  privilegeCode: string
+                  privilegeDesc: string
+                  privilegeUiCode: string
+                  sourceRoleId: 0
+                  sourceRoleCode: string
+                  allowSource: string
+                  pathDepth: 0
+  /api/v1.0/uimain/usrmgmt/roleHierarchyView/list/all:
+    get:
+      tags:
+        - usr-mgmt-controller
+      summary: getAllRoleHierarchyView
+      operationId: getAllRoleHierarchyView
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/RoleHierarchyView'
+              example:
+                - sourceRoleId: 0
+                  receivingRoleId: 0
+                  sourceRoleCode: string
+                  sourceRoleDesc: string
+                  receivingRoleCode: string
+                  receivingRoleDesc: string
+                  isTransferable: string
+  /api/v1.0/uimain/usrmgmt/role/data/tree:
+    get:
+      tags:
+        - usr-mgmt-controller
+      summary: getRoleTreeData
+      operationId: getRoleTreeData
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties:
+                  type: object
+components:
+  schemas:
+    UserEffectivePrivilege:
+      type: object
+      properties:
+        userId:
+          type: integer
+          format: int64
+        roleId:
+          type: integer
+          format: int64
+        privilegeId:
+          type: integer
+          format: int64
+        username:
+          type: string
+        roleCode:
+          type: string
+        privilegeCode:
+          type: string
+        privilegeDesc:
+          type: string
+        privilegeUiCode:
+          type: string
+        privilegeStatus:
+          type: string
+        allowSource:
+          type: string
+        pathDepth:
+          type: integer
+          format: int32
+    User:
+      type: object
+      properties:
+        userId:
+          type: integer
+          format: int64
+        username:
+          type: string
+        fullName:
+          type: string
+        email:
+          type: string
+        isAdmin:
+          type: string
+        createdBy:
+          type: string
+        createdOn:
+          type: string
+          format: date-time
+        modifiedBy:
+          type: string
+        modifiedOn:
+          type: string
+          format: date-time
+        active:
+          type: integer
+          format: int32
+        disableAfterDate:
+          type: string
+          format: date-time
+        lastSuccessfulLogin:
+          type: string
+          format: date-time
+        inactiveUserPolicy:
+          type: integer
+          format: int32
+    RolePrivilegesWithAllInheritance:
+      type: object
+      properties:
+        roleId:
+          type: integer
+          format: int64
+        privilegeId:
+          type: integer
+          format: int64
+        roleCode:
+          type: string
+        privilegeCode:
+          type: string
+        privilegeDesc:
+          type: string
+        privilegeUiCode:
+          type: string
+        sourceRoleId:
+          type: integer
+          format: int64
+        sourceRoleCode:
+          type: string
+        allowSource:
+          type: string
+        pathDepth:
+          type: integer
+          format: int32
+    RoleHierarchyView:
+      type: object
+      properties:
+        sourceRoleId:
+          type: integer
+          format: int64
+        receivingRoleId:
+          type: integer
+          format: int64
+        sourceRoleCode:
+          type: string
+        sourceRoleDesc:
+          type: string
+        receivingRoleCode:
+          type: string
+        receivingRoleDesc:
+          type: string
+        isTransferable:
+          type: string
+  securitySchemes:
+    apiKeyHeader:
+      type: apiKey
+      name: Ocp-Apim-Subscription-Key
+      in: header
+    apiKeyQuery:
+      type: apiKey
+      name: subscription-key
+      in: query
+security:
+  - apiKeyHeader: [ ]
+  - apiKeyQuery: [ ]

@@ -1,0 +1,28 @@
+openapi: 3.0.1
+info:
+  title: UserManagement-API
+  description: ''
+  version: v1
+servers:
+  - url: https://mbrh-testing.azure-api.net/v1
+paths:
+  /Iskan_API_UI_MAIN/api/v1.0/uimain/usrmgmt/user/list/all:
+    get:
+      summary: list-all-users
+      operationId: list-all-users
+      responses:
+        '200':
+          description: ''
+components:
+  securitySchemes:
+    apiKeyHeader:
+      type: apiKey
+      name: Ocp-Apim-Subscription-Key
+      in: header
+    apiKeyQuery:
+      type: apiKey
+      name: subscription-key
+      in: query
+security:
+  - apiKeyHeader: [ ]
+  - apiKeyQuery: [ ]

@@ -1,0 +1,39 @@
+openapi: 3.0.1
+info:
+  title: google-maps
+  description: ''
+  version: '1.0'
+servers:
+  - url: https://mbrh-testing.azure-api.net/maps
+paths:
+  /searchPlace:
+    get:
+      summary: searchPlace
+      operationId: searchplace
+      parameters:
+        - name: input
+          in: query
+          required: true
+          schema:
+            type: ''
+        - name: inputtype
+          in: query
+          required: true
+          schema:
+            type: ''
+      responses:
+        '200':
+          description: ''
+components:
+  securitySchemes:
+    apiKeyHeader:
+      type: apiKey
+      name: Ocp-Apim-Subscription-Key
+      in: header
+    apiKeyQuery:
+      type: apiKey
+      name: subscription-key
+      in: query
+security:
+  - apiKeyHeader: [ ]
+  - apiKeyQuery: [ ]

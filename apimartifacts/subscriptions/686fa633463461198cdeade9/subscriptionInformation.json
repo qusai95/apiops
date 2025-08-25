@@ -1,0 +1,9 @@
+{
+  "properties": {
+    "displayName": "integration-production-sub",
+    "scope": "/subscriptions/5f334cb5-5ba7-4cd0-a426-86db8882a07b/resourceGroups/MBRH-Test/providers/Microsoft.ApiManagement/service/mbrh-testing/products/integration-product",
+    "allowTracing": false,
+    "ownerId": "/subscriptions/5f334cb5-5ba7-4cd0-a426-86db8882a07b/resourceGroups/MBRH-Test/providers/Microsoft.ApiManagement/service/mbrh-testing/users/1",
+    "state": "active"
+  }
+}

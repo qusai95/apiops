@@ -1,0 +1,21 @@
+{
+  "properties": {
+    "path": "conference",
+    "apiRevision": "1",
+    "apiVersion": "v2",
+    "apiVersionSetId": "/subscriptions/5f334cb5-5ba7-4cd0-a426-86db8882a07b/resourceGroups/MBRH-Test/providers/Microsoft.ApiManagement/service/mbrh-testing/apiVersionSets/6870cc34f69c6a21f6426961",
+    "authenticationSettings": {},
+    "description": "A sample API with information related to a technical conference.  The available resources  include *Speakers*, *Sessions* and *Topics*.  A single write operation is available to provide  feedback on a session.",
+    "displayName": "Demo Conference API",
+    "protocols": [
+      "http",
+      "https"
+    ],
+    "serviceUrl": "https://conferenceapi.azurewebsites.net/",
+    "subscriptionKeyParameterNames": {
+      "header": "Ocp-Apim-Subscription-Key",
+      "query": "subscription-key"
+    },
+    "subscriptionRequired": true
+  }
+}

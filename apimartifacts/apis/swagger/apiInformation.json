@@ -1,0 +1,19 @@
+{
+  "properties": {
+    "path": "swagger",
+    "apiRevision": "1",
+    "authenticationSettings": {},
+    "description": "",
+    "isCurrent": true,
+    "displayName": "swagger",
+    "protocols": [
+      "https"
+    ],
+    "serviceUrl": "https://apiqa.mrhecloud.com/Iskan_API_UI_MAIN/",
+    "subscriptionKeyParameterNames": {
+      "header": "Ocp-Apim-Subscription-Key",
+      "query": "subscription-key"
+    },
+    "subscriptionRequired": false
+  }
+}

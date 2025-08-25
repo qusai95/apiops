@@ -1,0 +1,8 @@
+{
+  "properties": {
+    "description": "mbrh-admin",
+    "protocol": "http",
+    "resourceId": "https://management.azure.com/subscriptions/4941788a-1197-47e6-b4c3-6aff7ca03888/resourceGroups/MBRH-Test/providers/Microsoft.Web/sites/mbrh-admin",
+    "url": "https://mbrh-admin.azurewebsites.net"
+  }
+}

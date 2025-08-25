@@ -1,0 +1,19 @@
+{
+  "properties": {
+    "credentials": {
+      "header": {},
+      "query": {
+        "Key": [
+          "{{googleapikey}}"
+        ]
+      }
+    },
+    "protocol": "http",
+    "tls": {
+      "validateCertificateChain": true,
+      "validateCertificateName": true
+    },
+    "type": "Single",
+    "url": "https://maps.googleapis.com"
+  }
+}
