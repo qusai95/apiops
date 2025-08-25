@@ -1,0 +1,10 @@
+{
+  "properties": {
+    "displayName": "integration-product",
+    "description": "integration-product",
+    "approvalRequired": false,
+    "state": "notPublished",
+    "subscriptionRequired": true,
+    "subscriptionsLimit": 5
+  }
+}

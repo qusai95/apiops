@@ -1,0 +1,21 @@
+{
+  "properties": {
+    "path": "",
+    "apiRevision": "1",
+    "apiVersion": "v1",
+    "apiVersionSetId": "/subscriptions/5f334cb5-5ba7-4cd0-a426-86db8882a07b/resourceGroups/MBRH-Test/providers/Microsoft.ApiManagement/service/mbrh-testing/apiVersionSets/686fa265839662f97fc1d90c",
+    "authenticationSettings": {},
+    "description": "",
+    "isCurrent": true,
+    "displayName": "UserManagement-API",
+    "protocols": [
+      "https"
+    ],
+    "serviceUrl": "https://apiqa.mrhecloud.com/",
+    "subscriptionKeyParameterNames": {
+      "header": "Ocp-Apim-Subscription-Key",
+      "query": "subscription-key"
+    },
+    "subscriptionRequired": false
+  }
+}

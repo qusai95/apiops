@@ -1,0 +1,9 @@
+{
+  "properties": {
+    "displayName": "Unified Iskan Platform",
+    "description": "for testing purposes",
+    "approvalRequired": false,
+    "state": "published",
+    "subscriptionRequired": true
+  }
+}

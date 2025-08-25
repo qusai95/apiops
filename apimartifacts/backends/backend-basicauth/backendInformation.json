@@ -1,0 +1,19 @@
+{
+  "properties": {
+    "credentials": {
+      "authorization": {
+        "parameter": "{{sys-credentials}}",
+        "scheme": "Basic"
+      },
+      "header": {},
+      "query": {}
+    },
+    "protocol": "http",
+    "tls": {
+      "validateCertificateChain": true,
+      "validateCertificateName": true
+    },
+    "type": "Single",
+    "url": "https://www.example.com"
+  }
+}

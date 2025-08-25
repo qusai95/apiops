@@ -1,0 +1,19 @@
+{
+  "properties": {
+    "path": "main-ui",
+    "apiRevision": "1",
+    "authenticationSettings": {},
+    "description": "This is the API documentation for New Unified Iskan Platform to be utlized to build UI App",
+    "isCurrent": true,
+    "displayName": "Main UI API Docs",
+    "protocols": [
+      "https"
+    ],
+    "serviceUrl": "https://apiqa.mrhecloud.com/Iskan_API_UI_MAIN",
+    "subscriptionKeyParameterNames": {
+      "header": "Ocp-Apim-Subscription-Key",
+      "query": "subscription-key"
+    },
+    "subscriptionRequired": true
+  }
+}

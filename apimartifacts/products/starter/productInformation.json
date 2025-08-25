@@ -1,0 +1,9 @@
+{
+  "properties": {
+    "displayName": "Starter",
+    "description": "Subscribers will be able to run 5 calls/minute up to a maximum of 100 calls/week.",
+    "state": "published",
+    "subscriptionRequired": false,
+    "terms": ""
+  }
+}
